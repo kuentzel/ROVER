@@ -1,0 +1,639 @@
+{
+  "sections": [
+    {
+      "elements": [
+        {
+          "buttonText": "",
+          "hasButton": false,
+          "paragraphs": [
+            "This is the first instruction. The user is not presented with a button to progress. The investigator has to manually progress using the ROVER desktop UI."
+          ],
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Instruction",
+          "index": 0,
+          "type": 1
+        },
+        {
+          "buttonText": "NEXT",
+          "hasButton": true,
+          "paragraphs": [
+            "This is the second instruction, this time with a button, labelled NEXT. When building the instruction in code you can label the button anything you want, but make sure it fits. In the code set the first value behind the text content to true and fill in the string between the quotes."
+          ],
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "InstructionButton",
+          "index": 1,
+          "type": 1
+        },
+        {
+          "buttonText": "shy button",
+          "hasButton": true,
+          "paragraphs": [
+            "This is the first paragraph of the third instruction.\n\nThis is the second paragraph using backslash+n."
+          ],
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "InstructionParagraph",
+          "index": 2,
+          "type": 1
+        },
+        {
+          "buttonText": "<b>BE BOLD</b>",
+          "hasButton": true,
+          "paragraphs": [
+            "Using HTML-tags in the code, you can be <b>bold</b>, <b><color=#68B3DE>colorful</color></b>, and so much more."
+          ],
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "InstructionStyling",
+          "index": 3,
+          "type": 1
+        }
+      ],
+      "title": "Section A: Instruction",
+      "index": 0
+    },
+    {
+      "elements": [
+        {
+          "items": [
+            {
+              "layoutVariant": 0,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the first single item. You can only choose one answer. The layout here is a <b>vertical list</b> of all answer options."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Single Item (List)",
+              "id": "var_SI1",
+              "index": 0,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": false,
+          "hint": "This is the hint. It is the same for all items of a set. You can also style it like items.\nOption scales and labels are automatically generated from the specification. Make sure they have the same length.",
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 0,
+          "type": 0
+        },
+        {
+          "items": [
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the second single item. You can only choose one answer. The layout here is <b>endpoint scale</b> on the control panel"
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Single Item (Scale)",
+              "id": "var_SI2",
+              "index": 0,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": false,
+          "hint": "This is a different hint. Option scales and labels are automatically generated from the specification. Make sure they have the same length.",
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 1,
+          "type": 0
+        },
+        {
+          "items": [
+            {
+              "layoutVariant": 2,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the third single item. You can only choose one answer. The layout here is <b>endpoint scale</b> with a legend."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Single Item (Labels)",
+              "id": "var_SI3",
+              "index": 0,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": false,
+          "hint": "This another hint. Use it for short form instructions or interaction help.",
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 2,
+          "type": 0
+        },
+        {
+          "items": [
+            {
+              "layoutVariant": 4,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the fourth single item. You can only choose one answer. The layout here is <b>with button labels</b> on the control panel."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Single Item (Horizontal)",
+              "id": "var_SI4",
+              "index": 0,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": false,
+          "hint": "This yet another hint. There are more layout options. Refer to the code and its documentation.",
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 3,
+          "type": 0
+        },
+        {
+          "items": [
+            {
+              "layoutVariant": 1,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the fourth single item. You can only choose one answer. The layout here is a <b>horizontal list<b> of all answer options."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Single Item (Horizontal)",
+              "id": "var_SI5",
+              "index": 0,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": false,
+          "hint": "This the last hint. Consider which layout variant works best for you. ScaleEndpointsNoDisplay is the default. It does not show a legend on the main display.",
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 4,
+          "type": 0
+        }
+      ],
+      "title": "Section B: Single Item",
+      "index": 1
+    },
+    {
+      "elements": [
+        {
+          "items": [
+            {
+              "layoutVariant": 0,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the first item of this multi set. You can only choose one answer. The layout here is a <b>vertical list</b> of all answer options."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Multi Item S1 (List)",
+              "id": "var_MI1_1",
+              "index": 0,
+              "type": 0
+            },
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the second item of this multi set. You can only choose one answer. The layout here is <b>scale endpoints</b> on the control panel."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Multi Item S1 (Scale)",
+              "id": "var_MI1_2",
+              "index": 1,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": false,
+          "hint": "This is the hint for this set of multiple items. They can be in different layouts.",
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 0,
+          "type": 0
+        },
+        {
+          "items": [
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the first item of this multi set. You can only choose one answer. The layout here is a <b>endpoint scale</b>."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Multi Item S2.1",
+              "id": "var_MI2_1",
+              "index": 0,
+              "type": 0
+            },
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the second item of this multi set.\nYou can also break lines here.",
+                "Even paragraphs like this to separate scenario and question. But only on layouts without list or legend."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Multi Item S2.2",
+              "id": "var_MI2_2",
+              "index": 1,
+              "type": 0
+            },
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 3,
+              "minSelection": 2,
+              "isMultipleChoice": true,
+              "paragraphs": [
+                "This is the third item of this multi set. This item is multiple choice (experimental beta feature)! You can specify minimum and maximum amount of possible answers. Here you can choose between 2 or 3 answers."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Multi Item S2.2",
+              "id": "var_MI2_3",
+              "index": 2,
+              "type": 0
+            }
+          ],
+          "randomizeItems": true,
+          "allowBacksteps": true,
+          "hint": "This is a different hint. The items here are randomized.",
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 1,
+          "type": 0
+        },
+        {
+          "items": [
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the first item of this multi set. The second item will only be shown if you if you select the 4th answer."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "Multi Item S3 (Conditions)",
+              "id": "var_MI3_1",
+              "index": 0,
+              "type": 0
+            },
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the second item of this multi set. You selected label 4 (position 3) on the previous item. Only if you select smaller than 3 here will the next item set be displayed.\nUsage of the back button can be set globally and within each item set individually.\nTry going back one step and choosing a different outcome."
+              ],
+              "conditionalAnswers": [
+                3
+              ],
+              "conditionItem": null,
+              "conditionItemID": "var_MI3_1",
+              "isMandatory": true,
+              "title": "Multi Item S3 (Conditions)",
+              "id": "var_MI3_2",
+              "index": 1,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": true,
+          "hint": "This is another hint. You can add conditions to single items or whole sets. Only if the answer to the specified condition item includes one of the conditional answers specified, will the item referring to that condition be displayed.",
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 2,
+          "type": 0
+        },
+        {
+          "items": [
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "Great, you did it! You selected smaller than 3 (position 0 or 1) on the last item and caused this item set to display."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": "",
+              "isMandatory": true,
+              "title": "S4 (Conditions)",
+              "id": "var_MI4",
+              "index": 0,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": true,
+          "hint": "This the last hint. Conditions are specified in code by specifying the variable id of the condition item and an list of position values (starting at 0) for selections that trigger the condition.",
+          "conditionalAnswers": [
+            0,
+            1
+          ],
+          "conditionItemID": "var_MI3_2",
+          "section": null,
+          "title": "Item Set Title (currently not shown)",
+          "index": 3,
+          "type": 0
+        },
+        {
+          "buttonText": "<b>END</b>",
+          "hasButton": true,
+          "paragraphs": [
+            "By ending the survey, participants confirm their answers and final results are exported. The log always gets exported and you can also export manually from the UI.\nYou can't jump back over several condition-using items (yet). You can always restart the survey."
+          ],
+          "conditionalAnswers": null,
+          "conditionItemID": "",
+          "section": null,
+          "title": "Last Slide",
+          "index": 4,
+          "type": 1
+        }
+      ],
+      "title": "Section C: Multiple Items",
+      "index": 2
+    }
+  ],
+  "allowBacksteps": true,
+  "showProgressBar": true,
+  "title": "ROVER Sample",
+  "id": "rover_sample"
+}

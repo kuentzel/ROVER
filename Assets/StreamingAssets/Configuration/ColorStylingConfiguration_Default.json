@@ -1,0 +1,122 @@
+{
+  "displayFrameColor": {
+    "r": 230,
+    "g": 230,
+    "b": 230,
+    "a": 255
+  },
+  "backgroundDisplayColor": {
+    "r": 53,
+    "g": 53,
+    "b": 53,
+    "a": 255
+  },
+  "backgroundPrimaryColor": {
+    "r": 91,
+    "g": 91,
+    "b": 91,
+    "a": 255
+  },
+  "backgroundSecondaryColor": {
+    "r": 153,
+    "g": 153,
+    "b": 153,
+    "a": 255
+  },
+  "buttonSelectedColor": {
+    "r": 81,
+    "g": 161,
+    "b": 207,
+    "a": 255
+  },
+  "buttonPressedColor": {
+    "r": 60,
+    "g": 155,
+    "b": 210,
+    "a": 255
+  },
+  "buttonHoverColor": {
+    "r": 116,
+    "g": 198,
+    "b": 244,
+    "a": 255
+  },
+  "buttonIconActiveColor": {
+    "r": 255,
+    "g": 255,
+    "b": 255,
+    "a": 255
+  },
+  "buttonIconInactiveColor": {
+    "r": 166,
+    "g": 166,
+    "b": 166,
+    "a": 255
+  },
+  "buttonPrimaryActiveColor": {
+    "r": 179,
+    "g": 179,
+    "b": 179,
+    "a": 255
+  },
+  "buttonPrimaryInactiveColor": {
+    "r": 183,
+    "g": 183,
+    "b": 183,
+    "a": 255
+  },
+  "buttonSecondaryActiveColor": {
+    "r": 179,
+    "g": 179,
+    "b": 179,
+    "a": 255
+  },
+  "buttonSecondaryInactiveMaterial.color": {
+    "r": 139,
+    "g": 139,
+    "b": 139,
+    "a": 255
+  },
+  "foregroundPrimaryColor": {
+    "r": 115,
+    "g": 115,
+    "b": 115,
+    "a": 255
+  },
+  "foregroundSecondaryColor": {
+    "r": 140,
+    "g": 140,
+    "b": 140,
+    "a": 255
+  },
+  "iconColor": {
+    "r": 255,
+    "g": 255,
+    "b": 255,
+    "a": 255
+  },
+  "highlightFlashColor": {
+    "r": 53,
+    "g": 171,
+    "b": 239,
+    "a": 255
+  },
+  "textActiveColor": {
+    "r": 255,
+    "g": 255,
+    "b": 255,
+    "a": 255
+  },
+  "buttonTextPrimaryColor": {
+    "r": 255,
+    "g": 255,
+    "b": 255,
+    "a": 255
+  },
+  "buttonTextSecondaryColor": {
+    "r": 255,
+    "g": 255,
+    "b": 255,
+    "a": 255
+  }
+}

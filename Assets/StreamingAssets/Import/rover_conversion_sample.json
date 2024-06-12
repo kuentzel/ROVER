@@ -1,0 +1,252 @@
+{
+  "sections": [
+    {
+      "elements": [
+        {
+          "buttonText": "",
+          "hasButton": false,
+          "paragraphs": [
+            "For technical reasons use the \"Long free text\" instead of the \"text display\" template in Limesurvey for Instructions in ROVER that do not need to be answered. The content from the text field in the \"Question\" tab is displayed on the rating station. The  text from the \"Code\" field from the \"Question\" tab is set as title of the instruction in ROVER."
+          ],
+          "conditionalAnswers": null,
+          "conditionItemID": null,
+          "section": null,
+          "title": "Instruction",
+          "index": 0,
+          "type": 1
+        },
+        {
+          "buttonText": "NEXT",
+          "hasButton": true,
+          "paragraphs": [
+            "If you enter text in the text field in the \"Help\" tab, ROVER will generate a button labelled with the text specified there.\r\n\n\nOtherwise no button will be generated and the instruction will require investigators to manually progress the study state on the rating station using ROVER's desktop UI. This may be part of the study design."
+          ],
+          "conditionalAnswers": null,
+          "conditionItemID": null,
+          "section": null,
+          "title": "InstructionButton",
+          "index": 1,
+          "type": 1
+        }
+      ],
+      "title": "Section A: Instructions",
+      "index": 0
+    },
+    {
+      "elements": [
+        {
+          "items": [
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "The code of your single subquestion is the variable ID of the item in ROVER. The subquestion text field is what is displayed as the item in ROVER.  From the \"Answer options\" tab, the \"code\" field of an option is the numeric scale label and the text field is the text scale label."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": null,
+              "isMandatory": true,
+              "title": "SingleItem",
+              "id": "SingleItem_varSI",
+              "index": 0,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": true,
+          "hint": "Always use question type \"Array\" in Limesurvey, even for single items. The text field in the \"Question\" tab stays empty/unused.\r\n\n\nThe \"Code\" field in General Settings is used for the title of the item set in ROVER. The text from the \"Help\" text field is the same for every item of the set.",
+          "conditionalAnswers": null,
+          "conditionItemID": null,
+          "section": null,
+          "title": "SingleItem",
+          "index": 0,
+          "type": 0
+        }
+      ],
+      "title": "Section B: Single Items",
+      "index": 1
+    },
+    {
+      "elements": [
+        {
+          "items": [
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the first item.After Limesurvey import ROVER automatically saves a converted JSON version of the study."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": null,
+              "isMandatory": true,
+              "title": "MultipleItems",
+              "id": "MultipleItems_varMI1",
+              "index": 0,
+              "type": 0
+            },
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the second item.Randomize the items by writing \"randomize\" into the \"Question\" tab text field."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": null,
+              "isMandatory": true,
+              "title": "MultipleItems",
+              "id": "MultipleItems_varMI2",
+              "index": 1,
+              "type": 0
+            },
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This is the third item.Multiple choice behavior needs to be set accordingly in the converted JSON file."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": null,
+              "isMandatory": true,
+              "title": "MultipleItems",
+              "id": "MultipleItems_varMI3",
+              "index": 2,
+              "type": 0
+            },
+            {
+              "layoutVariant": 3,
+              "answerLabels": [
+                "fully disagree",
+                "disagree",
+                "somewhat disagree",
+                "neutral",
+                "somewhat agree",
+                "agree",
+                "fully agree"
+              ],
+              "answerScale": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "maxSelection": 0,
+              "minSelection": 0,
+              "isMultipleChoice": false,
+              "paragraphs": [
+                "This if the fourth question.Display style (ChoiceItemLayoutVariant) of the item (e.g. ListVertical, ScaleEndpoints, with or without legend) needs to be set accordingly in the converted JSON file."
+              ],
+              "conditionalAnswers": null,
+              "conditionItem": null,
+              "conditionItemID": null,
+              "isMandatory": true,
+              "title": "MultipleItems",
+              "id": "MultipleItems_varMI4",
+              "index": 3,
+              "type": 0
+            }
+          ],
+          "randomizeItems": false,
+          "allowBacksteps": true,
+          "hint": "Multi-Item sets work similarly. The \"Help\" text stays same for all items. As does the title from the \"code\" field in general settings.\r\n\n\nThe answer options must be the same for each item of the item set.\r\n\n\nWe recommend to use a maximum of 10 answer options",
+          "conditionalAnswers": null,
+          "conditionItemID": null,
+          "section": null,
+          "title": "MultipleItems",
+          "index": 0,
+          "type": 0
+        }
+      ],
+      "title": "Section C: Multiple Items",
+      "index": 2
+    },
+    {
+      "elements": [],
+      "title": "DO NOT END",
+      "index": 3
+    }
+  ],
+  "allowBacksteps": false,
+  "showProgressBar": true,
+  "title": "ROVER_Limesurvery_Sample",
+  "id": "141959"
+}

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Pointer
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - ROVER
+  - ROVER_HandLeft
+  - ROVER_HandRight
+  - ROVER3D
+  - ROVER_DesktopUI
+  - ROVERToast
+  - ROVERAvatar
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: GroundBackground
+    uniqueID: 989013629
+    locked: 0
+  - name: Background
+    uniqueID: 877815967
+    locked: 0
+  - name: Frame
+    uniqueID: 2527197869
+    locked: 0
+  - name: Button
+    uniqueID: 1113040771
+    locked: 0
+  - name: Detail
+    uniqueID: 4221337961
+    locked: 0
+  - name: Icon
+    uniqueID: 2500759477
+    locked: 0
+  - name: Foreground
+    uniqueID: 1454103839
+    locked: 0

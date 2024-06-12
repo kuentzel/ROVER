@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questionnaire id="141959">
+  <title>ROVER_Limesurvery_Sample</title>
+  <investigator/>
+  <dataCollector/>
+  <section id="9">
+    <sectionInfo>
+      <position>title</position>
+      <text>Section A: Instructions</text>
+      <administration>self</administration>
+    </sectionInfo>
+    <question>
+      <text>For technical reasons use the "Long free text" instead of the "text display" template in Limesurvey for Instructions in ROVER that do not need to be answered. The content from the text field in the "Question" tab is displayed on the rating station. The  text from the "Code" field from the "Question" tab is set as title of the instruction in ROVER.</text>
+      <response varName="Instruction">
+        <free>
+          <format>longtext</format>
+          <length>40</length>
+          <label/>
+        </free>
+      </response>
+    </question>
+    <question>
+      <text>&lt;p&gt;If you enter text in the text field in the "Help" tab, ROVER will generate a button labelled with the text specified there.&lt;/p&gt;
+
+&lt;p&gt;Otherwise no button will be generated and the instruction will require investigators to manually progress the study state on the rating station using ROVER's desktop UI. This may be part of the study design.&lt;/p&gt;</text>
+      <directive>
+        <position>during</position>
+        <text>NEXT</text>
+        <administration>self</administration>
+      </directive>
+      <response varName="InstructionButton">
+        <free>
+          <format>longtext</format>
+          <length>40</length>
+          <label/>
+        </free>
+      </response>
+    </question>
+  </section>
+  <section id="10">
+    <sectionInfo>
+      <position>title</position>
+      <text>Section B: Single Items</text>
+      <administration>self</administration>
+    </sectionInfo>
+    <question>
+      <directive>
+        <position>during</position>
+        <text>&lt;p&gt;Always use question type "Array" in Limesurvey, even for single items. The text field in the "Question" tab stays empty/unused.&lt;/p&gt;
+
+&lt;p&gt;The "Code" field in General Settings is used for the title of the item set in ROVER. The text from the "Help" text field is the same for every item of the set.&lt;/p&gt;</text>
+        <administration>self</administration>
+      </directive>
+      <subQuestion varName="SingleItem_varSI">
+        <text>The code of your single subquestion is the variable ID of the item in ROVER. The subquestion text field is what is displayed as the item in ROVER.  From the "Answer options" tab, the "code" field of an option is the numeric scale label and the text field is the text scale label.</text>
+      </subQuestion>
+      <response varName="SingleItem">
+        <fixed>
+          <category>
+            <label>fully disagree</label>
+            <value>1</value>
+          </category>
+          <category>
+            <label>disagree</label>
+            <value>2</value>
+          </category>
+          <category>
+            <label>agree</label>
+            <value>3</value>
+          </category>
+          <category>
+            <label>fully agree</label>
+            <value>4</value>
+          </category>
+        </fixed>
+      </response>
+    </question>
+  </section>
+  <section id="11">
+    <sectionInfo>
+      <position>title</position>
+      <text>Section C: Multiple Items</text>
+      <administration>self</administration>
+    </sectionInfo>
+    <question>
+      <directive>
+        <position>during</position>
+        <text>&lt;p&gt;Multi-Item sets work similarly. The "Help" text stays same for all items. As does the title from the "code" field in general settings.&lt;/p&gt;
+
+&lt;p&gt;The answer options must be the same for each item of the item set.&lt;/p&gt;
+
+&lt;p&gt;We recommend to use a maximum of 10 answer options&lt;/p&gt;</text>
+        <administration>self</administration>
+      </directive>
+      <subQuestion varName="MultipleItems_varMI1">
+        <text>This is the first item.After Limesurvey import ROVER automatically saves a converted JSON version of the study.</text>
+      </subQuestion>
+      <subQuestion varName="MultipleItems_varMI2">
+        <text>This is the second item.Randomize the items by writing "randomize" into the "Question" tab text field.</text>
+      </subQuestion>
+      <subQuestion varName="MultipleItems_varMI3">
+        <text>This is the third item.Multiple choice behavior needs to be set accordingly in the converted JSON file.</text>
+      </subQuestion>
+      <subQuestion varName="MultipleItems_varMI4">
+        <text>This if the fourth question.Display style (ChoiceItemLayoutVariant) of the item (e.g. ListVertical, ScaleEndpoints, with or without legend) needs to be set accordingly in the converted JSON file.</text>
+      </subQuestion>
+      <response varName="MultipleItems">
+        <fixed>
+          <category>
+            <label>fully disagree</label>
+            <value>1</value>
+          </category>
+          <category>
+            <label>disagree</label>
+            <value>2</value>
+          </category>
+          <category>
+            <label>somewhat disagree</label>
+            <value>3</value>
+          </category>
+          <category>
+            <label>neutral</label>
+            <value>4</value>
+          </category>
+          <category>
+            <label>somewhat agree</label>
+            <value>5</value>
+          </category>
+          <category>
+            <label>agree</label>
+            <value>6</value>
+          </category>
+          <category>
+            <label>fully agree</label>
+            <value>7</value>
+          </category>
+        </fixed>
+      </response>
+    </question>
+  </section>
+  <section id="12">
+    <sectionInfo>
+      <position>title</position>
+      <text>DO NOT END</text>
+      <administration>self</administration>
+    </sectionInfo>
+  </section>
+</questionnaire>
