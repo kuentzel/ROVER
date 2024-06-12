@@ -1,8 +1,8 @@
-![ROVER Logo](https://github.com/kuentzel/ROVER/ROVER_Logo)
+<img src="https://github.com/kuentzel/ROVER/ROVER_Logo">
 
-##ROVER: Rating Overlays for Virtual Environments in Research
+# ROVER: Rating Overlays for Virtual Environments in Research
 
-![Overview of the ROVER rating station.](https://github.com/kuentzel/ROVER/ROVER_Overview)
+<img src="https://github.com/kuentzel/ROVER/ROVER_Overview">
 
 ROVER is a tool and software development kit to enable researchers with a limited IT background to easily integrate immersive rating scales and questionnaires into their VR user experience studies.
 ROVER uses the SteamVR Overlay Interface together with the OpenVR Compositor Interface to project 2D content over the 3D Virtual Environment.
@@ -45,4 +45,4 @@ Feel free to open an issue at https://github.com/kuentzel/ROVER/issues> or conta
 5. Load sample survey
 6. Explore
 
-![ROVER QR](https://github.com/kuentzel/ROVER/ROVER_QR)
+<img src="https://github.com/kuentzel/ROVER/ROVER_QR>
