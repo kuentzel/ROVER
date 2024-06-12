@@ -2,6 +2,9 @@
 
 ROVER is a standalone, non-exclusive SteamVR Overlay Application designed for use with SteamVR as the OpenVR runtime or in OpenXR compatibility mode. Currently, ROVER is tested and supported on Windows 10 only.
 
+IMPORTANT: For input filter functionality to work "Experimental overlay input overrides" must be enabled in the developer section of SteamVR settings.
+
+
 ## Load Study Configuration
 
 You can load a study configuration via a JSON or XML file from the following path: `Application Folder -> ROVER_Data/StreamingAssets/Import`. Enter the filename (not case sensitive) WITHOUT the file extension (.json/.xml) into the ROVER Desktop UI under "Study Filename".
@@ -30,6 +33,8 @@ A sample export is provided in `ROVER_Data/Export`.
 - The virtual pointers are automatically hidden if the headset is not facing the rating station.
 - ROVER pauses and receives no input while the SteamVR Dashboard is open.
 - In `ROVER_Data/StreamingAssets/Configuration/MainConfiguration.json`, you can specify whether ROVER should filter input to the main scene application when the virtual pointers are showing.
+
+IMPORTANT: "Experimental overlay input overrides" must be enabled in the developer section of SteamVR settings.
 
 If the virtual pointers are not attached to the controllers or are stuck in the floor, follow these steps:
 
