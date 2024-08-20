@@ -8,7 +8,7 @@
     <img width="100%" src="https://github.com/kuentzel/ROVER/assets/12643357/971e7830-ca48-46b7-856b-0e35a9faf7d9">
 </p>
 
-ROVER is a tool and software development kit to enable researchers with a limited IT background to easily integrate immersive rating scales and questionnaires into their VR user experience studies.
+ROVER is a Virtual Reality / VR questionnaire toolkit to enable researchers with a limited IT background to easily integrate immersive rating scales and questionnaires into their VR user experience studies.
 
 ROVER uses the SteamVR Overlay Interface together with the OpenVR Compositor Interface to project 2D content over the 3D Virtual Environment.
 
