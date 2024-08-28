@@ -455,9 +455,9 @@ MonoBehaviour:
   m_fontSize: 256
   m_fontSizeBase: 256
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 128
+  m_fontSizeMax: 256
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -719,17 +719,17 @@ MonoBehaviour:
   textTitle: {fileID: 2906665836947358668}
   imageContent: {fileID: 2906665836912153357}
   textContent: {fileID: 2906665836491190520}
-  hasParagraphs: 0
   textContainer: {fileID: 0}
   textElementPrefab: {fileID: 0}
-  noOptionsOnDisplay: 0
-  hasEndpointLegend: 0
   textEndpointLegendLeft: {fileID: 0}
   textEndpointLegendRight: {fileID: 0}
-  variant: 1
   optionsPrefab: {fileID: 4660134075317313689, guid: 71256f32a4839804eafae5dd8a98b14c,
     type: 3}
   optionsContainer: {fileID: 2906665837448559613}
-  studyManager: {fileID: 0}
+  hasParagraphs: 0
+  noOptionsOnDisplay: 0
+  hasEndpointLegend: 0
   debug: 0
+  variant: 1
+  studyManager: {fileID: 0}
   singleChoiceOptionDisplays: []

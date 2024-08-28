@@ -458,19 +458,19 @@ MonoBehaviour:
   textTitle: {fileID: 5008447056793735088}
   imageContent: {fileID: 5008447056175432907}
   textContent: {fileID: 5008447055760415046}
-  hasParagraphs: 0
   textContainer: {fileID: 0}
   textElementPrefab: {fileID: 0}
-  noOptionsOnDisplay: 0
-  hasEndpointLegend: 0
   textEndpointLegendLeft: {fileID: 0}
   textEndpointLegendRight: {fileID: 0}
-  variant: 4
   optionsPrefab: {fileID: 4660134075317313689, guid: 71256f32a4839804eafae5dd8a98b14c,
     type: 3}
   optionsContainer: {fileID: 5008447055334697801}
-  studyManager: {fileID: 0}
+  hasParagraphs: 0
+  noOptionsOnDisplay: 0
+  hasEndpointLegend: 0
   debug: 0
+  variant: 4
+  studyManager: {fileID: 0}
   singleChoiceOptionDisplays: []
 --- !u!1 &5008447056175432904
 GameObject:
@@ -673,9 +673,9 @@ MonoBehaviour:
   m_fontSize: 256
   m_fontSizeBase: 256
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 128
+  m_fontSizeMax: 256
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -709,6 +709,6 @@ MonoBehaviour:
   m_margin: {x: 8.892517, y: 1.1036644, z: 3.0673828, w: 10.107483}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}

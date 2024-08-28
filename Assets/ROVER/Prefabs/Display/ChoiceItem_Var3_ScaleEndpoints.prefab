@@ -279,9 +279,9 @@ MonoBehaviour:
   m_fontSize: 256
   m_fontSizeBase: 256
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 128
+  m_fontSizeMax: 256
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -915,19 +915,19 @@ MonoBehaviour:
   textTitle: {fileID: 247421365027223506}
   imageContent: {fileID: 247421364482687272}
   textContent: {fileID: 247421365381701951}
-  hasParagraphs: 0
   textContainer: {fileID: 0}
   textElementPrefab: {fileID: 0}
-  noOptionsOnDisplay: 0
-  hasEndpointLegend: 1
   textEndpointLegendLeft: {fileID: 247421365272689895}
   textEndpointLegendRight: {fileID: 247421365358663355}
-  variant: 2
   optionsPrefab: {fileID: 7005928089062519844, guid: fdb863055233b8a48afc892ed6aabd46,
     type: 3}
   optionsContainer: {fileID: 247421365046321064}
-  studyManager: {fileID: 0}
+  hasParagraphs: 0
+  noOptionsOnDisplay: 0
+  hasEndpointLegend: 1
   debug: 0
+  variant: 2
+  studyManager: {fileID: 0}
   singleChoiceOptionDisplays: []
 --- !u!1 &247421366182771477
 GameObject:

@@ -368,9 +368,9 @@ MonoBehaviour:
   m_fontSize: 256
   m_fontSizeBase: 256
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 128
+  m_fontSizeMax: 256
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -470,12 +470,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   studyManager: {fileID: 0}
   textTitle: {fileID: 397487431893239450}
-  imageTitle: {fileID: 397487433139301073}
   textContent: {fileID: 397487431691420451}
-  imageContent: {fileID: 397487433107354697}
-  buttonBoxCollider: {fileID: 397487432856825491}
-  imageButton: {fileID: 397487432856825489}
   textButton: {fileID: 397487431478056453}
+  imageTitle: {fileID: 397487433139301073}
+  imageContent: {fileID: 397487433107354697}
+  imageButton: {fileID: 397487432856825489}
+  buttonBoxCollider: {fileID: 397487432856825491}
   boxColliderOffsetX: 0
   boxColliderOffsetY: 0
   boxColliderOffsetZ: 0
@@ -609,18 +609,19 @@ MonoBehaviour:
   bgButton: {fileID: 397487432856825489}
   highlightImage: {fileID: 5888128041274192054}
   hoverImage: {fileID: 5296213501004031593}
-  innerHoverHighlight: 0
   hoverCanvas: {fileID: 0}
+  laserPoint: {fileID: 0}
+  innerHoverHighlight: 0
   spawnToast: 0
   overrideSpeed: 0
   timedTouch: 0
   timedTouchSpeed: 90
   highlightStartSizePercentage: 20
   proximityTouch: 0
-  laserPoint: {fileID: 0}
-  debug: 0
+  triggerTouch: 0
   adjustCollider: 1
   adjustColliderKeepHeight: 1
+  debug: 0
 --- !u!1 &397487433107354699
 GameObject:
   m_ObjectHideFlags: 0

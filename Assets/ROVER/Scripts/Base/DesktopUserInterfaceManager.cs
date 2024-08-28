@@ -272,7 +272,7 @@ namespace ROVER
         public void SliderSurveyStationRotationUpdate()
         {
             // Update the rotation of the survey station based on the slider value.
-            transformSurveyStation.localRotation = Quaternion.Euler(transformSurveyStation.localRotation.eulerAngles.x, originalYRotationSurveyStation + stationRotation, transformSurveyStation.localRotation.eulerAngles.z);
+            surveyStationBase.transform.rotation = Quaternion.Euler(surveyStationBase.transform.rotation.eulerAngles.x, originalYRotationSurveyStation + stationRotation, surveyStationBase.transform.rotation.eulerAngles.z);
         }
 
         /// <summary>

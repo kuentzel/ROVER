@@ -138,12 +138,12 @@ namespace ROVER.Sensors
         /// <returns>The generated file path.</returns>
         private string GenerateFilePath()
         {
-            string directory = $"{Application.dataPath}/Export/{vpn}_{studyManager.SessionStartTimeString}";
+            string directory = $"{Application.dataPath}/Export/{vpn}_{studyManager.ActiveStudy.ID}_{studyManager.SessionStartTimeString}";
 
             if (!Directory.Exists(directory))
                 Directory.CreateDirectory(directory);
 
-            return $"{directory}/{vpn}_{studyManager.SessionStartTimeString}_SensorLog.csv";
+            return $"{directory}/{vpn}_{studyManager.ActiveStudy.ID}_{studyManager.SessionStartTimeString}_SensorLog.csv";
         }
 
         /// <summary>

@@ -77,6 +77,10 @@
     {
       "controller_type": "vive_tracker_camera",
       "binding_url": "binding_vive_tracker_camera.json"
+    },
+	{
+      "controller_type": "vive_tracker_keyboard",
+      "binding_url": "binding_vive_tracker_keyboard.json"
     }
   ],
   "localization": [

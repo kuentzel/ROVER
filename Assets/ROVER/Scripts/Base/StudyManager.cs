@@ -204,7 +204,6 @@ namespace ROVER
         /// </summary>
         public void StartStudy()
         {
-            activeStudy = null;
 #if UNITY_EDITOR
             if (debug)
 #endif
@@ -220,6 +219,7 @@ namespace ROVER
 
             // Clear previous results
             resultManager.Results?.Clear();
+            activeStudy = null;
 
             // Import study data
             activeStudy = importExportManager.ImportStudy();
