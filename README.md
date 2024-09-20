@@ -20,7 +20,7 @@ Find a video of ROVER's features here: https://github.com/kuentzel/ROVER/ROVER_O
 
 
 ROVER is meant to be used as a standalone executable. It does not need to be and is not meant to be integrated into your own project.
-ROVER can be downloaded here: https://github.com/kuentzel/ROVER/releases/tag/v2406r2
+ROVER can be downloaded here: https://github.com/kuentzel/ROVER/releases/tag/v2408r1
 
 You can download more sample questionnaires (Usability Metric for User Experience, System Usability Scale, NASA Task Load Index, igroup Presence Questionnaire, etc.) here: https://github.com/kuentzel/ROVER/releases/tag/qp1
 
