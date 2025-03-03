@@ -8,6 +8,11 @@
     <img width="100%" src="https://github.com/kuentzel/ROVER/assets/12643357/971e7830-ca48-46b7-856b-0e35a9faf7d9">
 </p>
 
+# !!!Disclaimer!!!
+Due to various updates (SteamVR, OpenVR, Meta XR Core SDK/Oculus Integration) and how these software components interface, ROVER no longer works with some OpenXR applications that have updated their Oculus SDKs (e.g. BeatSaber, OhShape and many more Quest ports and PC originals). It does not matter if you enable Meta Plugin Compatibility in SteamVR or try to force SteamVR through OVR Toolkit. Instead of trying to find stable SDK versions that work, I am investigating how I can fix this issue on the side of ROVER. However, if you want to use ROVER I recommend developing your own applications using OpenVR Loader / SteamVR Plugin in the Unity XR Management. For closed-source/commercial applications see if you can downgrade the version (works for BeatSaber by selecting a beta branch in Steam). I am working on it and might only be able to fix it by downgrading the SDKs that I am using (requiring further refactoring), as this issue arises with the newest SteamVR version on a minimal tech stack.
+
+# Description
+
 ROVER is a Virtual Reality / VR questionnaire toolkit to enable researchers with a limited IT background to easily integrate immersive rating scales and questionnaires into their VR user experience studies.
 
 ROVER uses the SteamVR Overlay Interface together with the OpenVR Compositor Interface to project 2D content over the 3D Virtual Environment.
