@@ -9,6 +9,8 @@
 </p>
 
 # !!!Disclaimer!!!
+We are working on this. The issue lies with the OpenVR Initialization of the SteamVR Unity Plugin. ROVER works with applications targeting OpenVR (but not OpenXR) when used with Steam or SteamLink. When connecting to Quest Headsets through AirLink, ROVER works with SteamVR and OpenXR applications. We have raised an issue with the developers of the SteamVR Unity Plugin, but are working on transitioning away from using it for interactions and tracking by Fall '25, which will solve the issue on the ROVER side.
+
 Due to various updates (SteamVR, OpenVR, Meta XR Core SDK/Oculus Integration) and how these software components interface, ROVER no longer works with some OpenXR applications that have updated their Oculus SDKs (e.g. BeatSaber, OhShape and many more Quest ports and PC originals). It does not matter if you enable Meta Plugin Compatibility in SteamVR or try to force SteamVR through OVR Toolkit. Instead of trying to find stable SDK versions that work, I am investigating how I can fix this issue on the side of ROVER. However, if you want to use ROVER I recommend developing your own applications using OpenVR Loader / SteamVR Plugin in the Unity XR Management. For closed-source/commercial applications see if you can downgrade the version (works for BeatSaber by selecting a beta branch in Steam). I am working on it and might only be able to fix it by downgrading the SDKs that I am using (requiring further refactoring), as this issue arises with the newest SteamVR version on a minimal tech stack.
 
 # Description
