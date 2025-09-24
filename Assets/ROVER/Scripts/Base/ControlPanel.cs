@@ -189,7 +189,7 @@ namespace ROVER
             polarLabelContainer.SetActive(false);
 
             // Handle the case where the variant is ScaleEndpointsNoDisplay
-            if (variant == ChoiceItemLayoutVariant.ScaleEndpointsNoDisplay)
+            if (variant == ChoiceItemLayoutVariant.ScaleEndpointsNoDisplay || variant == ChoiceItemLayoutVariant.ScaleEndpoints)
             {
                 // Activate the polar labels container and enable auto-sizing if needed
                 polarLabelContainer.SetActive(true);
@@ -204,6 +204,12 @@ namespace ROVER
                 labelRight.GetComponent<CanvasRenderer>().SetAlpha(0);
                 labelLeft.text = ((ChoiceItem)item).OptionLabels[0];
                 labelRight.text = ((ChoiceItem)item).OptionLabels[((ChoiceItem)item).OptionLabels.Length - 1];
+
+                if (variant == ChoiceItemLayoutVariant.ScaleEndpoints)
+                {
+                    labelLeft.text = "";
+                    labelRight.text = "";
+                }
 
                 // Invoke resizing of polar labels after a short delay
                 Invoke("ResizePolarLabels", 0.005f);

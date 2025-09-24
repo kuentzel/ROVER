@@ -17,24 +17,24 @@ namespace ROVER
     [JsonObject(MemberSerialization.OptIn)]
     public class StudyElement
     {
-        [JsonProperty(Order = 31)]
+        [JsonProperty(Order = 1)]
         protected TypeOfStudyElement type;
 
-        [JsonProperty(Order = 30)]
+        [JsonProperty(Order = 2)]
         private int index;
 
-        [JsonProperty(Order = 29)]
+        [JsonProperty(Order = 3)]
         protected string title;
 
-        [JsonProperty(Order = 28)]
+        [JsonProperty(Order = 4)]
         private StudySection section;
 
-        [JsonProperty(Order = 27)]
+        [JsonProperty(Order = 5)]
         protected string conditionItemID;
 
         protected ChoiceItem conditionItem;
 
-        [JsonProperty(Order = 26)]
+        [JsonProperty(Order = 6)]
         protected int[] conditionalAnswers;
 
         /// <summary>
@@ -74,13 +74,13 @@ namespace ROVER
     [JsonObject(MemberSerialization.OptIn)]
     public class Instruction : StudyElement
     {
-        [JsonProperty(Order = 25)]
+        [JsonProperty(Order = 7)]
         private string[] paragraphs;
 
-        [JsonProperty(Order = 24)]
+        [JsonProperty(Order = 8)]
         private bool hasButton;
 
-        [JsonProperty(Order = 23)]
+        [JsonProperty(Order = 9)]
         private string buttonText;
 
         /// <summary>

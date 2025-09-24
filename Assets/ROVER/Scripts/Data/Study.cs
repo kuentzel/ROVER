@@ -8,19 +8,19 @@ namespace ROVER
     [JsonObject(MemberSerialization.OptIn)]
     public class Study
     {
-        [JsonProperty(Order = 31)]
+        [JsonProperty(Order = 1)]
         private string id;
 
-        [JsonProperty(Order = 30)]
+        [JsonProperty(Order = 2)]
         private string title;
 
-        [JsonProperty(Order = 29)]
+        [JsonProperty(Order = 3)]
         private bool showProgressBar;
 
-        [JsonProperty(Order = 28)]
+        [JsonProperty(Order = 4)]
         private bool allowBacksteps;
 
-        [JsonProperty(Order = 27)]
+        [JsonProperty(Order = 5)]
         private StudySection[] sections;
 
         /// <summary>

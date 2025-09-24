@@ -8,16 +8,16 @@ namespace ROVER
     [JsonObject(MemberSerialization.OptIn)]
     public class ItemSet : StudyElement
     {
-        [JsonProperty(Order = 25)]
+        [JsonProperty(Order = 7)]
         private string hint;
 
-        [JsonProperty(Order = 24)]
+        [JsonProperty(Order = 8)]
         private bool allowBacksteps;
 
-        [JsonProperty(Order = 23)]
+        [JsonProperty(Order = 9)]
         private bool randomizeItems;
 
-        [JsonProperty(Order = 22)]
+        [JsonProperty(Order = 10)]
         private Item[] items;
 
         /// <summary>

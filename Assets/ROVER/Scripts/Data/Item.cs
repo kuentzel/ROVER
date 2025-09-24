@@ -30,22 +30,22 @@ namespace ROVER
     [JsonObject(MemberSerialization.OptIn)]
     public class Item
     {
-        [JsonProperty(Order = 31)]
+        [JsonProperty(Order = 11)]
         protected TypeOfItem type;
-        [JsonProperty(Order = 30)]
+        [JsonProperty(Order = 12)]
         private int index;
-        [JsonProperty(Order = 29)]
+        [JsonProperty(Order = 13)]
         protected string id;
-        [JsonProperty(Order = 28)]
+        [JsonProperty(Order = 14)]
         protected string title;
         private ItemSet itemSet;
-        [JsonProperty(Order = 27)]
+        [JsonProperty(Order = 15)]
         private bool isMandatory;
-        [JsonProperty(Order = 26)]
+        [JsonProperty(Order = 16)]
         protected string conditionItemID;
-        [JsonProperty(Order = 25)]
+        [JsonProperty(Order = 17)]
         protected ChoiceItem conditionItem;
-        [JsonProperty(Order = 24)]
+        [JsonProperty(Order = 18)]
         protected int[] conditionalAnswers;
 
         /// <summary>
@@ -81,19 +81,19 @@ namespace ROVER
     /// </summary>
     public class ChoiceItem : Item
     {
-        [JsonProperty(Order = 23)]
+        [JsonProperty(Order = 19)]
         private string[] paragraphs;
-        [JsonProperty(Order = 22)]
+        [JsonProperty(Order = 20)]
         private bool isMultipleChoice;
         [JsonProperty(Order = 21)]
         private int minSelection;
-        [JsonProperty(Order = 20)]
+        [JsonProperty(Order = 22)]
         private int maxSelection;
-        [JsonProperty(Order = 19)]
+        [JsonProperty(Order = 23)]
         protected string[] answerScale;
-        [JsonProperty(Order = 18)]
+        [JsonProperty(Order = 24)]
         protected string[] answerLabels;
-        [JsonProperty(Order = 17)]
+        [JsonProperty(Order = 25)]
         protected ChoiceItemLayoutVariant layoutVariant = ChoiceItemLayoutVariant.ListVertical;
 
         /// <summary>

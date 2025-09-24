@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -45,10 +45,15 @@ namespace ROVER.Overlay
         /// Start is called before the first frame update.
         /// Initializes the overlay manager and sets the frame rate.
         /// </summary>
+        private void Awake()
+        {
+            //StartCoroutine(ChangeFramerate(0, targetFrameRate));
+            instance = this;
+            
+        }
+
         private void Start()
         {
-            StartCoroutine(ChangeFramerate(0, targetFrameRate));
-            instance = this;
             prevState = state;
         }
 
@@ -127,15 +132,15 @@ namespace ROVER.Overlay
             {
                 case OverlayState.None:
                     SetOverlayState(false, false);
-                    StartCoroutine(ChangeFramerate(0, targetFrameRate));
+                    //StartCoroutine(ChangeFramerate(0, targetFrameRate));
                     break;
                 case OverlayState.Light:
                     SetOverlayState(true, false);
-                    StartCoroutine(ChangeFramerate(0, targetFrameRate));
+                    //StartCoroutine(ChangeFramerate(0, targetFrameRate));
                     break;
                 case OverlayState.Scene:
                     SetOverlayState(false, true);
-                    StartCoroutine(ChangeFramerate(0, -1));
+                    //StartCoroutine(ChangeFramerate(0, -1));
                     break;
             }
 
@@ -187,7 +192,8 @@ namespace ROVER.Overlay
         /// </summary>
         private void OnDisable()
         {
-            Shutdown();
+            //SteamVR_Events.Initialized.Send(false);
+            OpenVR.Shutdown();
             SteamVR_Events.System(EVREventType.VREvent_Quit).Remove(OnQuit);
         }
 
@@ -220,13 +226,6 @@ namespace ROVER.Overlay
             return true;
         }
 
-        /// <summary>
-        /// Shuts down the overlay manager by disconnecting from the VR runtime.
-        /// </summary>
-        public void Shutdown()
-        {
-            DisconnectFromVRRuntime();
-        }
 
         /// <summary>
         /// Connects to the VR runtime.
@@ -234,17 +233,32 @@ namespace ROVER.Overlay
         /// <returns>True if the connection was successful, false otherwise.</returns>
         private bool ConnectToVRRuntime()
         {
-            SteamVR.InitializeStandalone(EVRApplicationType.VRApplication_Overlay);
-            return true;
-        }
+            //If manually initializing SteamVR_Input, SteamVR_Action_Pose.SetTrackingUniverseOrigin(SteamVR_Settings.instance.trackingSpace) -> OpenVR.Compositor.SetTrackingSpace(newOrigin) will cause the Compositor projection to break for OpenXR standalone apps
+            //SteamVR_Input.Initialize();
+            //OpenVR.Compositor.SetTrackingSpace(...) is only called in the SteamVR Plugin in SteamVR_Action_Pose.SetTrackingUniverseOrigin(...) and in SteamVR_Render.RenderLoop(). When setting up actions manually, you still need to set their Tracking Universe Origin, but you can do it without setting Compositor Tracking Space. When using SteamVR_Behaviour Components, it will set up a SteamVR_Render component automatically, which will set the Compositor Tracking Space each render loop iteration. For our project, we added a check "if (SteamVR.isStandalone)" before the two occurences of OpenVR.Compositor.SetTrackingSpace(...) in the SteamVR Plugin, which works for our purposes.
+            //Using SteamLink and a Quest headset, I have noticed that in OpenXR standalone apps like up-to-date BeatSaber, when opening the SteamVR Dashboard, the Tracking Universe gets flipped, meaning the game gets turned around 180 degrees around height axis, while the Dashboard appears in front. Could be related.
 
-        /// <summary>
-        /// Disconnects from the VR runtime.
-        /// </summary>
-        private void DisconnectFromVRRuntime()
-        {
-            SteamVR_Events.Initialized.Send(false);
-            OpenVR.Shutdown();
+            //Cannot use regular SteamVR.InitializeStandalone(EVRApplicationType.VRApplication_Overlay) because the SteamVR Object and Render Components will be initialized and run their RenderLoop triggering OpenVR.Compositor.SetTrackingSpace(...) before SteamVR.isStandalone is set to true, which will cause the Compositor projection to break for OpenXR standalone apps
+            //SteamVR.InitializeStandalone(EVRApplicationType.VRApplication_Overlay);
+            // if (OpenVR.Overlay == null)
+            // {
+            //     Debug.Log("Overlay not found");
+            //     return false;
+            // }
+            //SteamVR.Initialize(true);
+
+            EVRInitError initError = EVRInitError.Unknown;
+            if (OpenVR.Overlay == null)
+            {   
+                OpenVR.Init(ref initError, EVRApplicationType.VRApplication_Overlay);            
+                if (OpenVR.Overlay == null)
+                {
+                    Debug.Log("Overlay not found");
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         /// <summary>

@@ -193,6 +193,7 @@ namespace ROVER
         public event TouchButtonEventHandler TouchButtonCharging;
         public event TouchButtonEventHandler TouchButtonCommitted;
         public event TouchButtonEventHandler TouchButtonSelected;
+        public event TouchButtonEventHandler TouchButtonMissed;
 
         /// <summary>
         /// Unity Awake method called when the script instance is being loaded.
@@ -209,9 +210,14 @@ namespace ROVER
         /// </summary>
         private void Start()
         {
+            //If manually initializing SteamVR_Input, SteamVR_Action_Pose.SetTrackingUniverseOrigin(SteamVR_Settings.instance.trackingSpace) -> OpenVR.Compositor.SetTrackingSpace(newOrigin) will cause the Compositor projection to break for OpenXR standalone apps
+            //SteamVR_Input.Initialize();
+            //OpenVR.Compositor.SetTrackingSpace(...) is only called in the SteamVR Plugin in SteamVR_Action_Pose.SetTrackingUniverseOrigin(...) and in SteamVR_Render.RenderLoop(). When setting up actions manually, you still need to set their Tracking Universe Origin, but you can do it without setting Compositor Tracking Space. When using SteamVR_Behaviour Components, it will set up a SteamVR_Render component automatically, which will set the Compositor Tracking Space each render loop iteration. For our project, we added a check "if (SteamVR.isStandalone)" before the two occurences of OpenVR.Compositor.SetTrackingSpace(...) in the SteamVR Plugin, which works for our purposes.
+
+
             // Initialize VR actions
-            inputAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("InteractUI");
-            hapticAction = SteamVR_Input.GetAction<SteamVR_Action_Vibration>("Haptic");
+            inputAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("interactui");
+            hapticAction = SteamVR_Input.GetAction<SteamVR_Action_Vibration>("haptic");
 
             // Retrieve touch settings from the study manager
             timedTouch = studyManager.timedTouch;
@@ -262,6 +268,15 @@ namespace ROVER
             overrideSphere = !overrideSphere;
         }
 
+        private TouchButton missCandidate;
+        private float timeout = 0.3f;
+
+        private void ResetMissCandidate()
+        {
+            missCandidate = null;
+        }
+
+
         /// <summary>
         /// Unity Update method called once per frame.
         /// </summary>
@@ -269,6 +284,12 @@ namespace ROVER
         {
             // Update the length of the pointer
             UpdateLength();
+
+            if(missCandidate != null && inputAction.GetStateDown(handType))
+            {
+                TouchButtonMissed?.Invoke(this, new TouchButtonEventArgs(currentMode, missCandidate, DateTime.UtcNow, handType, missCandidate.transform.position, missCandidate.transform.rotation.eulerAngles, transform.position, transform.rotation.eulerAngles));
+                missCandidate = null;
+            }
 
             // Determine if the control panel should be visible based on the headset position and orientation
             Vector3 lookDirection = new Vector3(headset.transform.forward.x, 0, headset.transform.forward.z);
@@ -437,7 +458,8 @@ namespace ROVER
                 {
                     aiming = false;
                     // Invoke the TouchButtonLost event
-                    TouchButtonLost?.Invoke(this, new TouchButtonEventArgs(currentMode, prevHit, DateTime.UtcNow, handType, prevHit.transform.position, prevHit.transform.rotation.eulerAngles, transform.position, transform.rotation.eulerAngles));
+                    if (prevHit != null)
+                        TouchButtonLost?.Invoke(this, new TouchButtonEventArgs(currentMode, prevHit, DateTime.UtcNow, handType, prevHit.transform.position, prevHit.transform.rotation.eulerAngles, transform.position, transform.rotation.eulerAngles));
                     prevHit = null;
                 }
                 // If the touch button is still valid and either trigger touch is enabled or the button allows proximity touch
@@ -450,6 +472,7 @@ namespace ROVER
                         charging = false;
                         // Invoke the TouchButtonAimed event
                         TouchButtonAimed?.Invoke(this, new TouchButtonEventArgs(currentMode, tb, DateTime.UtcNow, handType, tb.transform.position, tb.transform.rotation.eulerAngles, transform.position, transform.rotation.eulerAngles));
+                        missCandidate = null;
                     }
 
                     prevHit = tb;
@@ -530,7 +553,10 @@ namespace ROVER
                 // If no touch button is hit or the touch button has changed, stop aiming
                 aiming = false;
                 // Invoke the TouchButtonLost event
-                TouchButtonLost?.Invoke(this, new TouchButtonEventArgs(currentMode, prevHit, DateTime.UtcNow, handType, prevHit.transform.position, prevHit.transform.rotation.eulerAngles, transform.position, transform.rotation.eulerAngles));
+                if (prevHit != null)
+                    TouchButtonLost?.Invoke(this, new TouchButtonEventArgs(currentMode, prevHit, DateTime.UtcNow, handType, prevHit.transform.position, prevHit.transform.rotation.eulerAngles, transform.position, transform.rotation.eulerAngles));
+                missCandidate = prevHit;
+                Invoke(nameof(ResetMissCandidate), timeout);
                 prevHit = null;
             }
 

@@ -1,16 +1,16 @@
 {
   "actions": [
     {
-      "name": "/actions/default/in/Pose",
+      "name": "/actions/default/in/pose",
       "type": "pose",
       "requirement": "mandatory"
     },
     {
-      "name": "/actions/default/out/Haptic",
+      "name": "/actions/default/out/haptic",
       "type": "vibration"
     },
     {
-      "name": "/actions/pointer/in/InteractUI",
+      "name": "/actions/pointer/in/interactui",
       "type": "boolean",
       "requirement": "mandatory"
     }
@@ -78,7 +78,7 @@
       "controller_type": "vive_tracker_camera",
       "binding_url": "binding_vive_tracker_camera.json"
     },
-	{
+    {
       "controller_type": "vive_tracker_keyboard",
       "binding_url": "binding_vive_tracker_keyboard.json"
     }

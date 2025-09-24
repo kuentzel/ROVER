@@ -17,19 +17,19 @@ namespace Valve.VR
     public class SteamVR_Input_ActionSet_default : Valve.VR.SteamVR_ActionSet
     {
         
-        public virtual SteamVR_Action_Pose Pose
+        public virtual SteamVR_Action_Pose pose
         {
             get
             {
-                return SteamVR_Actions.default_Pose;
+                return SteamVR_Actions.default_pose;
             }
         }
         
-        public virtual SteamVR_Action_Vibration Haptic
+        public virtual SteamVR_Action_Vibration haptic
         {
             get
             {
-                return SteamVR_Actions.default_Haptic;
+                return SteamVR_Actions.default_haptic;
             }
         }
     }

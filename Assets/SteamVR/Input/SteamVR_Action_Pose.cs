@@ -171,7 +171,8 @@ namespace Valve.VR
         public static void SetTrackingUniverseOrigin(ETrackingUniverseOrigin newOrigin)
         {
             SetUniverseOrigin(newOrigin);
-            OpenVR.Compositor.SetTrackingSpace(newOrigin);
+            if (SteamVR.isStandalone)         
+                OpenVR.Compositor.SetTrackingSpace(newOrigin);
         }
     }
 
@@ -188,6 +189,7 @@ namespace Valve.VR
         /// </summary>
         protected static void SetUniverseOrigin(ETrackingUniverseOrigin newOrigin)
         {
+            Debug.Log("Set Universe Origin");
             for (int actionIndex = 0; actionIndex < SteamVR_Input.actionsPose.Length; actionIndex++)
             {
                 SteamVR_Input.actionsPose[actionIndex].sourceMap.SetTrackingUniverseOrigin(newOrigin);

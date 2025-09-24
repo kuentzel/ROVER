@@ -10,6 +10,7 @@
   ],
   "dependencies": {
     "com.atteneder.gltfast": "https://github.com/atteneder/glTFast.git#v5.0.0",
+    "com.boxqkrtm.ide.cursor": "https://github.com/boxqkrtm/com.unity.ide.cursor.git",
     "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
     "com.readyplayerme.core": "https://github.com/readyplayerme/rpm-unity-sdk-core.git#v4.1.2",
     "com.unity.2d.sprite": "1.0.0",

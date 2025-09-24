@@ -49,6 +49,7 @@ namespace ROVER
             studyManager.leftPointer.TouchButtonCommitted += TouchButtonCommitted;
             studyManager.leftPointer.TouchButtonLost += TouchButtonLost;
             studyManager.leftPointer.TouchButtonSelected += TouchButtonSelected;
+            studyManager.leftPointer.TouchButtonMissed += TouchButtonMissed;
 
             studyManager.rightPointer.TouchButtonAimed += TouchButtonAimed;
             studyManager.rightPointer.TouchButtonHovered += TouchButtonHovered;
@@ -56,6 +57,7 @@ namespace ROVER
             studyManager.rightPointer.TouchButtonCommitted += TouchButtonCommitted;
             studyManager.rightPointer.TouchButtonLost += TouchButtonLost;
             studyManager.rightPointer.TouchButtonSelected += TouchButtonSelected;
+            studyManager.rightPointer.TouchButtonMissed += TouchButtonMissed;
         }
 
         /// <summary>
@@ -78,6 +80,7 @@ namespace ROVER
             studyManager.leftPointer.TouchButtonCommitted -= TouchButtonCommitted;
             studyManager.leftPointer.TouchButtonLost -= TouchButtonLost;
             studyManager.leftPointer.TouchButtonSelected -= TouchButtonSelected;
+            studyManager.leftPointer.TouchButtonMissed -= TouchButtonMissed;
 
             studyManager.rightPointer.TouchButtonAimed -= TouchButtonAimed;
             studyManager.rightPointer.TouchButtonHovered -= TouchButtonHovered;
@@ -85,6 +88,7 @@ namespace ROVER
             studyManager.rightPointer.TouchButtonCommitted -= TouchButtonCommitted;
             studyManager.rightPointer.TouchButtonLost -= TouchButtonLost;
             studyManager.rightPointer.TouchButtonSelected -= TouchButtonSelected;
+            studyManager.rightPointer.TouchButtonMissed -= TouchButtonMissed;
         }
 
         /// <summary>
@@ -157,7 +161,7 @@ namespace ROVER
                 DisplaySingleChoiceOption dsco = e.button.GetComponentInParent<DisplaySingleChoiceOption>();
                 if (dsco != null)
                 {
-                    log += $"Option {dsco.optionNumber} of Item S{dsco.referencedSCitem.ItemSet.Section.Index}-E{dsco.referencedSCitem.ItemSet.Index}-I{dsco.referencedSCitem.Index} - ";
+                    log += $"Option {dsco.optionNumber} of Item S{dsco.referencedSCitem.ItemSet.Section.Index}-E{dsco.referencedSCitem.ItemSet.Index}-I{dsco.referencedSCitem.Index} - {dsco.referencedSCitem.ID} ";
                 }
             }
 
@@ -191,6 +195,7 @@ namespace ROVER
         private void TouchButtonHovered(object sender, TouchButtonEventArgs e) => LogTouchButtonEvent(e, "Hovered");
         private void TouchButtonCharging(object sender, TouchButtonEventArgs e) => LogTouchButtonEvent(e, "Charging");
         private void TouchButtonCommitted(object sender, TouchButtonEventArgs e) => LogTouchButtonEvent(e, "Committed");
+        private void TouchButtonMissed(object sender, TouchButtonEventArgs e) => LogTouchButtonEvent(e, "Missed");
         private void TouchButtonSelected(object sender, TouchButtonEventArgs e) => LogTouchButtonEvent(e, "Selected");
         private void TouchButtonLost(object sender, TouchButtonEventArgs e) => LogTouchButtonEvent(e, "Lost");
 

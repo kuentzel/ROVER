@@ -111,7 +111,7 @@ namespace ROVER
             if (adjustCollider)
             {
                 coll.size = adjustColliderKeepHeight
-                    ? new Vector3(((RectTransform)transform.parent).rect.width, coll.size.y, 10f)
+                    ? new Vector3(((RectTransform)transform.parent).rect.width, startHeight, 10f)
                     : new Vector3(trans.rect.width, trans.rect.height, 10f);
             }
         }
@@ -153,7 +153,7 @@ namespace ROVER
                 if (timedTouch)
                 {
                     // Set the hover canvas transparency based on the proximity value
-                    hoverCanvas.SetAlpha(Math.Min(proximity + 0.25f, 1));
+                    hoverCanvas?.SetAlpha(Math.Min(proximity + 0.25f, 1));
 
                     // Determine if the proximity is close enough to trigger a timed touch event
                     timeProximity = proximity >= 0.75f;
@@ -161,7 +161,7 @@ namespace ROVER
                 else
                 {
                     // Set the hover canvas to fully visible
-                    hoverCanvas.SetAlpha(1f);
+                    hoverCanvas?.SetAlpha(1f);
 
                     // Check if trigger touch is enabled and the main pointer is triggered
                     if (triggerTouch && mainPointer.Triggered)
