@@ -12,10 +12,9 @@
 You can use this webapp as a graphical user interface to configure your questionnaires for ROVER: https://jrmykch.github.io/fbk_webapp/
 We will make the multi-platform Flutter project available open-source for native use after the project's conclusion.
 
-# !!!Disclaimer!!!
-We still aim to maintain this project. Due to various updates (SteamVR, OpenVR, Meta XR Core SDK/Oculus Integration) and how these software components interface, ROVER no longer works with some OpenXR applications that have updated their Oculus SDKs (e.g. BeatSaber, OhShape and many more Quest ports and PC originals). 
-The issue lies with the OpenVR Initialization of the SteamVR Unity Plugin. ROVER works with applications targeting OpenVR (but not OpenXR) when used with Steam or SteamLink. However, when connecting to Quest Headsets through AirLink, ROVER works with SteamVR and OpenXR applications. We have raised an issue with the developers of the SteamVR Unity Plugin, but are working on transitioning away from depending on the SteamVR plugin for interactions and tracking by Fall '25, which will solve the issue on the ROVER side.
-However, if you want to use ROVER I recommend switching your own applications to use OpenVR Loader / SteamVR Plugin in the Unity XR Management. For closed-source/commercial applications see if you can downgrade the version (works for BeatSaber by selecting a beta branch in Steam). For this issue it does not matter if you enable Meta Plugin Compatibility in SteamVR or try to force SteamVR through OVR Toolkit. 
+# Known Issues
+ROVER should work with OpenXR apps, but works best with OpenVR apps.
+We are investigating an issue causing overlays (such as the text display) to be flipped 180° when starting ROVER with the user turned away too far from the SteamVR Chaperone/PlayZone Forward-Direction ("looking back"). This issue is likely related to our "fix" for OpenXR apps.
 
 # Description
 
