@@ -48,11 +48,9 @@ You are welcome to contribute and we will review any pull-requests (commit to th
 Feel free to open an issue at https://github.com/kuentzel/ROVER/issues> or contact us at kuentzel@hochschule-trier.de
 
 ## Planned Updates
-
-- Graphical User Interface / Web App for easy Survey/Questionnaire Configuration (feel free to reach out if you require assistance) -> Q1 2025
-- Improvement and expansion of the graphical desktop UI to cover the configuration option currently set via the text files -> Q4 2024
-- Improved guide on setting up and using ROVER (feel free to reach out if you require assistance) -> Q4 2024
-- Cleaned-up and improved item layouts, more item types (images, sliders, etc.) -> Q1 2025
+- Improvement and expansion of the graphical desktop UI to cover the configuration option currently set via the text files
+- Improved guide on setting up and using ROVER (feel free to reach out if you require assistance)
+- Cleaned-up and improved item layouts, more item types (images, sliders, etc.)
 
 ## Dependencies and Attribution
 
